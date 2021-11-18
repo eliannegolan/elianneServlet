@@ -13,5 +13,5 @@ cache:
 deploy:
   provider: heroku
   api_key: 6296341a-d7e9-490c-bb90-e3e4edf6e208
-  app: elianneServlet
+  app: elianneservlet
   skip_cleanup: true
