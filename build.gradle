@@ -1,11 +1,12 @@
 plugins {
     id 'java'
     id 'war' // To create a webapp jar file, ie a '.war' file
-    //id 'org.gretty' version '3.0.6' // This includes a jetty webserver
+    id 'org.gretty' version '3.0.6' // This includes a jetty webserver
 }
 version '1.0-SNAPSHOT'
 sourceCompatibility = 1.8
 repositories {
+    google()
     jcenter()
     mavenCentral() // gretty doesn't exist in mavenCentral, so use jcenter
 }
@@ -27,6 +28,9 @@ dependencies {
     compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+   // implementation 'com.google.code.gson:gson:version:2.7'
+    implementation group: 'com.google.code.gson', name:'gson',version: '2.7'
+
 }
 test {
     useJUnitPlatform()
